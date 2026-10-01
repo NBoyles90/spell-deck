@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell Deck</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="game">
+        <h1>Spell Deck</h1>
+
+        <p class="instructions">Choose a spell.</p>
+        <button class="reset">Reset</button>
+        <p class="enemy-attack"></p>
+
+        <p>Enemy Health: <span class="enemy-health">75</span></p>
+        <p>Player Mana: <span class="mana">100</span></p>
+        <p>Player Health: <span class="player-health">100</span></p>
+        <p>Mana Potions Left: <span class="potions mana-potion">3</span></p>
+        <p>Health Potions Left: <span class="potions health-potion">3</span></p>
+        <div class="potion">
+            <button class="potion-btn mana-btn" type="button">Drink Mana Potion</button>
+            <button class="potion-btn health-btn" type="button">Drink Health Potion</button>
+        </div>
+
+        <section class="spell-board">
+            <!-- JavaScript creates spell cards here -->
+        </section>
+
+        <p class="instructions player-death-count">Player Death: 0</p>
+        <p class="instructions enemy-death-count">Enemy Death: 0</p>
+
+
+    </main>
+
+</body>
+</html>

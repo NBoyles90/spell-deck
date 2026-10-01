@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #161625;
+    color: white;
+}
+
+.game {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+
+    background: #22223a;
+    border: 2px solid #4a4a70;
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+
+/* TITLE + MESSAGES */
+
+.game h1 {
+    margin: 0 0 10px;
+
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+}
+
+.instructions {
+    margin: 8px 0;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.enemy-attack {
+    min-height: 24px;
+    margin: 15px 0 20px;
+
+    color: #ff8d8d;
+    font-weight: bold;
+}
+
+
+/* RESET BUTTON */
+
+.reset {
+    padding: 7px 16px;
+
+    border: 1px solid #77778f;
+    border-radius: 6px;
+
+    background: #343447;
+    color: #dddddf;
+
+    cursor: pointer;
+}
+
+.reset:hover {
+    background: #48485f;
+    color: white;
+}
+
+
+/* GAME STATS */
+
+.game > p:not(.instructions):not(.enemy-attack) {
+    display: inline-block;
+
+    min-width: 180px;
+    margin: 6px;
+    padding: 12px 16px;
+
+    background: #18182c;
+    border: 1px solid #45456b;
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.enemy-health {
+    color: #ff6b6b;
+}
+
+.player-health {
+    color: #67d391;
+}
+
+.mana {
+    color: #6db7ff;
+}
+
+.potions {
+    color: #d9a7ff;
+}
+
+
+/* MANA POTION */
+
+.potion {
+    display: block;
+}
+
+.potion-btn {
+    display: inline-block;
+
+    margin: 20px 10px 30px;
+    padding: 12px 20px;
+
+    border: 1px solid #8c6ccf;
+    border-radius: 8px;
+
+    background: #32254f;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.potion-btn:hover{
+    background: #443168;
+}
+
+
+/* SPELL CARDS */
+
+.spell-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.spell-card {
+    min-height: 170px;
+    padding: 20px 15px;
+
+    border: 2px solid #55558a;
+    border-radius: 10px;
+
+    background: #292947;
+    color: white;
+
+    cursor: pointer;
+}
+
+.spell-card:hover {
+    background: #36365c;
+    border-color: #7777b5;
+}
+
+.spell-card h2 {
+    margin: 0 0 15px;
+
+    font-size: 1.25rem;
+}
+
+.spell-card p {
+    margin: 7px 0;
+}
+
+.spell-power {
+    color: #ffcf70;
+    font-weight: bold;
+}
+
+.mana-cost {
+    color: #79bfff;
+    font-weight: bold;
+}
+
+
+/* SMALL SCREENS */
+
+@media (max-width: 700px) {
+    .spell-board {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game > p:not(.instructions):not(.enemy-attack) {
+        min-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .game {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .spell-board {
+        grid-template-columns: 1fr;
+    }
+
+    .game > p:not(.instructions):not(.enemy-attack) {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+    }
+}
